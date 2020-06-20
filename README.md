@@ -15,7 +15,7 @@ Unity 2019.2.21f1 じゃない場合、アップロードしたワールドへ�
 - iOS Build Support
 - Mac Build Support (Mono)
 - 
-### 参考
+#### 参考
 - [【cluster】すぐ出来る！ワールド作成の始め方](https://creator.cluster.mu/2020/02/27/helloworld/)
 
 ## プロジェクト設定,環境設定  
@@ -40,7 +40,8 @@ Unity 2019.2.21f1 じゃない場合、アップロードしたワールドへ�
 - [clusterワールドアップロード(ビルド)高速化tips](https://twitter.com/noir_neo/status/1236619014165549058?s=20)
 
 
-## Cluster Creator Kit
+## Cluster Creator Kit の導入
+
 
 # 最低限必要な要素の配置
 
@@ -67,7 +68,7 @@ Unity 2019.2.21f1 じゃない場合、アップロードしたワールドへ�
 
 
 
-## 参考
+#### 参考
 - [ワールド作成の基礎を学ぼう](https://creator.cluster.mu/2020/03/03/learn-world-basic/)
 
 # ワープ銃の実装
@@ -129,11 +130,11 @@ Prefab化した `Shooter` に弾を発射するギミックを追加していき
     - Parameter Type Signal
 4. `Create Item Gimmick` を追加  
     - Key fire
-    - `Item Template` に `Assets` Items にある `Web` を設定
+    - `Item Template` の `Assets` Items にある `Web` を設定
     - `Spawn Point` を `Muzzle` に設定
 5. `再生ボタン` を押して `Shooter` が持て使えるがでるか確認してみる。
 
-### 参考
+#### 参考
 [Use Item Trigger](https://clustervr.gitbook.io/creatorkit/triggers/use-item-trigger)  
 [Create Item Gimmick](https://clustervr.gitbook.io/creatorkit/gimmicks/create-item-gimmick)
 
@@ -173,9 +174,24 @@ Prefab化した　`Web` に当たったら消えるトリガーとギミック�
     - `Key` destroy
 2. `再生ボタン` を押して `Shooter` で弾が消えるか確認してみる。
 
-### 参考
+#### 参考
 [On Collide Item Trigger](https://clustervr.gitbook.io/creatorkit/triggers/on-collide-item-trigger)  
 [Destroy Item Gimmick](https://clustervr.gitbook.io/creatorkit/triggers/on-collide-item-trigger)
 
 
 ## 当たった場所にプレイヤーをワープさせる
+ここでは `Warp Player Gimmick` を使います。  
+弾が当たった場所へ プレイヤーをワープさせます。
+Prefab化した　`Web` に当たった場所にワープさせるトリガーとギミックを追加していきます。
+
+![Warp](./res/warp1.png)
+
+1. `Item Template` の `Assets` Items にある `Web` を選択する
+2. `On Collide Item Trigger` の Size を 2 に変更
+    - `Target` Owner
+    - `Key` warp
+    - `Parameter Type` Signal
+3. `Warp Player Gimmick` を追加する  
+    - `Target` Player
+    - `Target Transform` Web (Prefabをドラッグ＆ドロップ)
+4. `再生ボタン` を押して `Shooter` で 床に弾を打ってワープするか確認してみる。
