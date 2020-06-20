@@ -282,4 +282,4 @@ MonoBehaviour:
     key: warp
   targetTransform: {fileID: 3008333188261004100}
   keepPosition: 0
-  keepRotation: 1
+  keepRotation: 0
