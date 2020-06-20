@@ -195,3 +195,18 @@ Prefab化した　`Web` に当たった場所にワープさせるトリガー�
     - `Target` Player
     - `Target Transform` Web (Prefabをドラッグ＆ドロップ)
 4. `再生ボタン` を押して `Shooter` で 床に弾を打ってワープするか確認してみる。
+
+# ワープできるポイントを増やしてみる
+床だけだとツマラナイので、高くのぼれたり離れた場所に飛べるよう
+足場になるオブジェクトを追加してみます。
+
+![Stage1](./res/stage1.png)
+
+1. `Hierarchy` で右クリック `Create Empty` で `GameObject` を追加　　
+    - 追加した `GameObject` の名前を `Stage1` に設定
+2. `Stage1` の下に `Cube` を追加する
+    - `Position` 3,1,4
+    - `Scale` 2,2,2
+3. `Cube` に `Box Collider` がついている事を確認する
+4. ほかにも適当に `Collider` ついたオブジェクトを増やす
+4. `再生ボタン` を押して `Shooter` で Cube に弾を打ってワープするか確認してみる。
