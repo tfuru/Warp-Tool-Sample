@@ -37,8 +37,10 @@ Unity 2019.2.21f1 じゃない場合、アップロードしたワールドへ�
 環境設定で変更必要な箇所  
 - General　> Compress Assets on Import  
 値 false (チェックを外す)
-- Cache Server > Asset pipeline v1 > Cache Server Mode
+- Cache Server > Asset pipeline v1 > Cache Server Mode  
 値 Local 
+
+![cash-local](./res/cash-local.png)
 
 #### 参考
 - [Creator Kitの導入](https://clustervr.gitbook.io/creatorkit/installation/install-creatorkit/)
